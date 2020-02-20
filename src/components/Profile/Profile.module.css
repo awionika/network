@@ -1,0 +1,14 @@
+
+.content{
+    grid-area: c;
+    background-color:rgba(0, 255, 255, 0.925);
+  
+  }
+  .content img {
+    width:800px; 
+  }
+
+  .item{
+      color: lightcoral;
+
+  }
