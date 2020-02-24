@@ -3,7 +3,7 @@ import s from './Header.module.css';
 
 const Header= () => {
     return <header className= {s.header}>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqYBVMMEESYXk4mrDAYnmPIUlrG3gBU8mhXVien701dq_NxvZ2' />
+        <img src='https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX14129878.jpg' />
     </header>
       
 }

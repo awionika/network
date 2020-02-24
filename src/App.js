@@ -6,17 +6,15 @@ import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 
-
-// video 18 ReactJS vremja 15.41
-
-function App() {
+const App =(props)=> {
   return (
     <div className='app-wrapper' >
-      <Header/>
-      <NavBar/>
-      <Dialogs/>
+      <Header />
+      <NavBar />
+      <div className='app-wrapper-content'>
+        <Dialogs />
+      </div>
       {/*<Profile/>*/}
-      
     </div>
 
   );
