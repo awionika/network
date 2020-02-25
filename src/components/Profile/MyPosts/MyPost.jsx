@@ -7,20 +7,24 @@ const MyPost = () => {
     //debugger;
 
     return (
-        <div className={s.posts}>
-             My post
+        <div className={s.postBlock}>
+            My post
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                  <button>Add post</button>
+                </div>
             </div>
             <div className={s.posts}>
-              <Post message = 'Hi, how are you?' likesCount = '0'/>
-              <Post message = "It's my first post" likesCount = '23'/>
-              <Post message = "It's my post"/>
+                <Post message='Hi, how are you?' likesCount='0' />
+                <Post message="It's my first post" likesCount='23' />
+                <Post message="It's my post" />
             </div>
-            
+
         </div>
-   
+
     )
 }
 
