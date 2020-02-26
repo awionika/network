@@ -6,22 +6,32 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import Setting from './components/Setting/Setting';
 import News from './components/News/News';
+import Friends from './components/Friends/Friends';
 import { Route, BrowserRouter } from 'react-router-dom';
 
-const App =(props)=> {
+
+const App = (props) => {
+
   return (
     <BrowserRouter>
-    <div className='app-wrapper' >
-      <Header />
-      <NavBar />
-      <div className='app-wrapper-content'>
-      <Route path='/dialogs' component={Dialogs}/>
-      <Route path='/profile' component={Profile}/>
-      <Route path='/news' component={News}/>
-      <Route path='/setting' component={Setting}/>
+      <div className='app-wrapper'>
+        <Header />
+        <NavBar />
+        <div className='app-wrapper-content'>
+          <Route path='/dialogs' 
+                  render={() => <Dialogs state={props.state.dialogsPage}/> } />
+          <Route path='/profile' 
+                 render={() => <Profile state={props.state.profilePage}/> }/>
+
+          <Route path='/news' component={News} />
+          <Route path='/setting' component={Setting} />
+
+          <Route path='/fiends' component={Friends} />
+
+
+        </div>
       </div>
-    </div>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
 

@@ -1,9 +1,8 @@
- .postBlock {
-    padding: 10px;
-  
+ .postsBlock {
+    padding: 10px;  
 }
 
-.post{
+.posts {
     margin-top: 10px;
 }
 

@@ -9,9 +9,9 @@ const Post = (props) => {
     return (
         <div className={s.item}>
             <img src='https://cdn.dribbble.com/users/172091/screenshots/2948495/tatyana1.jpg' />
-            {props.message}
+            {props.state.message}
              <div>
-            <span> like </span> {props.likesCount}
+            <span> like </span> {props.state.likesCount}
             </div>
             
         </div>
