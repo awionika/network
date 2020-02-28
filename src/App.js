@@ -13,7 +13,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 const App = (props) => {
 
   return (
-    <BrowserRouter>
+    
       <div className='app-wrapper'>
         <Header />
         <NavBar />
@@ -31,7 +31,7 @@ const App = (props) => {
 
         </div>
       </div>
-    </BrowserRouter> 
+      
   );
 }
 
