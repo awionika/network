@@ -1,3 +1,6 @@
+let  rerenderEntireTree = () =>{
+
+}
 
 let state = {
     profilePage: {
@@ -6,7 +9,9 @@ let state = {
             { id: 2, message: 'How are you?', likesCount: 11 },
             { id: 3, message: 'Blablabla', likesCount: 15 },
             { id: 4, message: 'lalalala', likesCount: 10 }
-        ]
+        ],
+
+        newPostText: 'Enter-message'
     },
 
     dialogsPage: {
@@ -39,5 +44,30 @@ let state = {
         { id: 7, name: 'Glenn' }
     ]
 }
+
+window.state=state;
+
+export const addPost =()=>{
+    let newPost = {
+        id: 5,
+        message: state.profilePage.newPostText,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    state.state.profilePage.newPostText='';
+    rerenderEntireTree(state);
+}
+
+
+export const updateNewPostText =(newText)=>{
+    state.profilePage.newPostText =newText;
+    rerenderEntireTree(state);
+}
+
+export const subscribe =(observer)=>{
+    rerenderEntireTree = observer; //pochitat obrever, publisher-subscriber!!! eto odin iz pattern !!!
+
+}
+// store - oop pochitat
 
 export default state;
